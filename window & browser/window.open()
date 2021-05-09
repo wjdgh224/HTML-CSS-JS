@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>윈도우 여기</title>
+	<title>윈도우 열기</title>
 <script type="text/javascript">
 	function load(URL) {
 		window.open(URL, "myWin", "left=300,top300,width=400,height=300");
