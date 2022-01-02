@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>소프트웨어 기술</title>
+<style>
+	h1 { text-align: center}
+	header { background-color: yellow;}
+	form { background-color: pink; padding:20px; margin-left: 20px}
+	footer { background-color: purple; }
+	
+</style>
+</head>
+<body>
+<header>
+	<h1>설문지</h1>
+	<p>소프트웨어 기술에 대한 의견을 듣습니다. 많은 참여 부탁드립니다.</p>
+</header><br>
+<section>
+	<form>
+		<span>학년</span> <input id="list" type="radio" name="grade">1학년
+			<input type="radio" name="grade">2학년
+			<input type="radio" name="grade">3학년
+			<input type="radio" name="grade">4학년<br><br>
+		<span>성별</span> <input type="radio" name="sex">남
+			<input type="radio" name="sex">여<br><br>
+		<span>관심분야</span> 
+		<select name="interest">
+			<option>모바일 소프트웨어</option>
+		</select><br><br>
+		<span>진로(다중 선택)</span> <input type="checkbox">개발
+			<input type="checkbox">기획
+			<input type="checkbox">영업
+			<input type="checkbox">창업<br><br>
+		<span>남기고 싶은 말</span> <textarea cols="75" rows="10">글을 남겨주세요</textarea><br><br>
+	</form>
+</section>
+<footer>
+	<p>
+	Copyright 2017 by Jeongho
+	</p>
+</footer>
+</body>
+</html>
