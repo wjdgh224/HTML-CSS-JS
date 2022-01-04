@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>break 문</title>
+</head>
+<body>
+<h3>1에서 얼마까지 더해야 3000을 넘는가?</h3>
+<hr>
+<script>
+	var n = 1, sum = 0;
+	while(true) {
+		sum += n;
+		if(sum>3000)
+			break;
+		n++;
+	}
+	document.write(n + "까지 더하면 3000을 넘음 : " + sum);
+</script>
+</body>
+</html>
