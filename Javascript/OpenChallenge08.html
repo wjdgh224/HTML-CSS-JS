@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>갬블링 게임</title>
+<style>
+	span { color : blue; font-size : 7em; padding:10px;}
+</style>
+<script>
+	var cnt = 0;
+	var s1, s2, s3;
+	function change1() {
+		var n = Math.floor(Math.random()*3);
+		s1 = document.getElementById("1");
+		s1.innerHTML = n;
+	}
+	function change2() {
+		var n = Math.floor(Math.random()*3);
+		s2 = document.getElementById("2");
+		s2.innerHTML = n;
+	}
+	function change3() {
+		var n = Math.floor(Math.random()*3);
+		s3 = document.getElementById("3");
+		s3.innerHTML = n;
+		var re = document.getElementById("result");
+		if((s1.innerHTML == s2.innerHTML) && (s2.innerHTML == s3.innerHTML)) {
+			re.innerHTML = "Success(click here to do again)";
+		}
+		else {
+			re.innerHTML = "fail(click here to do again)";
+		}	
+	}
+	function again() {
+		 document.getElementById("result").innerHTML = " ";
+         document.getElementById("1").innerHTML = 0;
+         document.getElementById("2").innerHTML = 0;
+         document.getElementById("3").innerHTML = 0;
+	}
+</script>
+</head>
+<body>
+<h3>갬블링 게임</h3>
+<p>
+각 숫자를 클릭하면 0에서 2사이의 난수로 바뀝니다. 모두 같은 수가 나오면 승리합니다.
+</p>
+<hr>
+<div style="background-color:pink; width:300px; height:150px; text-align:center;">
+	<span id="1" onclick="change1()">0</span>
+	<span id="2" onclick="change2()">0</span>
+	<span id="3" onclick="change3()">0</span>
+</div>
+<div id="result" onclick="again()" style="color:violet"></div>
+</body>
+</html>
