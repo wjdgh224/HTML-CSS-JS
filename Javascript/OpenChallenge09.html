@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>마우스 클릭 연습</title>
+<style>
+	img { width:50px; height:50px;}
+</style>
+</head>
+<body onload="make()">
+<h3>마우스 클릭 연습</h3>
+<hr>
+<table border="1">
+	<tbody>
+		<tr><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td></tr>
+		<tr><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td></tr>
+		<tr><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td></tr>
+		<tr><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td></tr>
+		<tr><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td></tr>
+		<tr><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td></tr>
+		<tr><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td></tr>
+		<tr><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td></tr>
+		<tr><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td></tr>
+		<tr><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td><td><img onclick="clk()" src=""></td></tr>
+		
+	</tbody>
+</table>
+<script>
+	var n;
+	function make() {
+		for(var i=0; i<100; i++) {
+			document.images[i].src = "";
+		}
+		n = Math.floor(Math.random()*100);
+		document.images[n].src = "apple.jfif";
+	}
+	function clk() {
+		if(document.images[n] != ""){
+			document.images[n].src = "";
+			var r = Math.floor(Math.random()*100);
+			document.images[r].src = "apple.jfif";
+			n = r;
+		}
+	}
+</script>
+</body>
+</html>
