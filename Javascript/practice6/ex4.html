@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>prompt()</title>
+</head>
+<body>
+<h3>월화수목금토일</h3>
+<hr>
+<script>
+	var str = prompt("월화수목금토일 중에서 입력하세요" ,"");
+	switch(str) {
+		case "월":
+		case "화":
+		case "수":
+		case "목":
+			document.write(str + "는 출근");
+			break;
+		default:
+			document.write(str + "는 휴일")
+	}	
+</script>
+</body>
+</html>

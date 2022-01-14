@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>prompt()</title>
+</head>
+<body>
+<h3>큰 자리수와 낮은자리수 같은지 비교</h3>
+<hr>
+<script>
+	var n = prompt("숫자입력");
+	var first = Math.floor(n/10);
+	var last = n%10;
+	while(true) {
+		if(first<10)
+			break;
+		first = Math.floor(first/10);
+	}
+	if(first==last || first==0)
+		document.write(n + ": 같음");
+	else
+		document.write(n + ": 다름");
+</script>
+</body>
+</html>
