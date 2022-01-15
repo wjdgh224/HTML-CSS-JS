@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>클릭하면 2,3,4배로 옆으로 늘어납니다.</title>
+</head>
+<body>
+<h3>클릭하면 2,3,4배로 옆으로 늘어납니다.</h3>
+<hr>
+<img src="spongebob.png" onclick="f(this)">
+<script>
+	var s = 1;
+	function f(obj) {
+		s++;
+		obj.style.transform = "scale(" + s + ", 1)";
+	}
+</script>
+</body>
+</html>

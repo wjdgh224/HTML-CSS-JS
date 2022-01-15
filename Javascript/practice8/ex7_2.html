@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>클릭하면 90도 회전합니다.</title>
+</head>
+<body>
+<h3>클릭하면 90도 회전합니다.</h3>
+<hr>
+<img src="spongebob.png" onclick="f(this)">
+<script>
+	var d = 0;
+	function f(obj) {
+		d = (d+90)%360;
+		obj.style.transform="rotate(" + d + "deg)";
+	}
+</script>
+</body>
+</html>
