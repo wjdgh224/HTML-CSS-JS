@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>라디오 버튼을 클릭하면 이미지를 출력합니다.</title>
+</head>
+<body>
+<h3>라디오 버튼을 클릭하면 이미지를 출력합니다.</h3>
+<hr>
+<form>
+<input type="radio" name="fruit" value="banana.jfif" onchange="f()">바나나
+<input type="radio" name="fruit" value="mango.jfif" onchange="f()">망고
+<input type="radio" name="fruit" value="apple.jfif" checked="checked" onchange="f()">사과
+<br>
+<img src="apple.jfif" id="img">
+</form>
+<script>
+	function f() {
+		var found = null;
+		var img = document.getElementById("img");
+		var e = document.getElementsByName("fruit");
+		for(var i=0; i<e.length; i++) {
+			if(e[i].checked == true) {
+				img.src = e[i].value;
+			}
+		}		
+	}
+</script>
+</body>
+</html>
