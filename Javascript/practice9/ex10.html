@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>계산기 만들기</title>
+<script>
+	var str = "";
+	function f(obj) {
+		str += obj.value;
+		document.getElementById("exp").value = str;
+	}
+	function calc() {
+		var text = document.getElementById("exp");
+		text.value = eval(text.value);		
+	}
+	function reset() {
+		document.getElementById("exp").value = "0";
+	}
+	function back() {
+		var tmp = "";
+		for(var i=0; i<str.length-1; i++) {
+			tmp += str[i];
+		}
+		str = tmp;
+		document.getElementById("exp").value = str;
+	}
+</script>
+</head>
+<body>
+<h3>계산기 만들기</h3>
+<hr>
+<input type="text" id="exp" value="0"><br>
+<input type="button" value="BACK" onclick="back()">
+<input type="button" value="CE" onclick="reset()">
+<input type="button" value="C" onclick="reset()">
+<input type="button" value="=" onclick="calc()"><br>
+<input type="button" value="7" onclick="f(this)">
+<input type="button" value="8" onclick="f(this)">
+<input type="button" value="9" onclick="f(this)">
+<input type="button" value="/" onclick="f(this)"><br>
+<input type="button" value="4" onclick="f(this)">
+<input type="button" value="5" onclick="f(this)">
+<input type="button" value="6" onclick="f(this)">
+<input type="button" value="*" onclick="f(this)"><br>
+<input type="button" value="1" onclick="f(this)">
+<input type="button" value="2" onclick="f(this)">
+<input type="button" value="3" onclick="f(this)">
+<input type="button" value="-" onclick="f(this)"><br>
+<input type="button" value="0" onclick="f(this)">
+<input type="button" value="+" onclick="f(this)">
+<input type="button" value="NONE">
+<input type="button" value="NONE">
+</body>
+</html>

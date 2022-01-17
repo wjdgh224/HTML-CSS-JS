@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>계산기 만들기</title>
+</head>
+<body>
+<h3>계산기 만들기</h3>
+<hr>
+수식을 입력하고 &lt;Enter&gt;를 입력하세요. <br><br>
+식 <input type="text" id="exp" onkeydown="f(event)"><br>
+값 <input type="text" id="val">
+<script>
+	function f(e) {
+		if(e.keyCode==13) {
+		var exp = document.getElementById("exp").value;
+		document.getElementById("val").value = eval(exp);
+		}
+	}
+</script>
+</body>
+</html>
