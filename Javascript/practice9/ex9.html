@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>아이템에 마우스를 올리면 설명 출력</title>
+<style>
+	div { position : absolute;
+		background : aliceblue;
+		border : 2px solid yellowgreen;
+		visibility: hidden}
+</style>
+<script>
+	var text = ["빨간 자전거를 타고 서울...",
+				"책을 읽고...", 
+				"운동을 하여..." ,
+				"프로그래밍 공부는..."];
+	function f(e, obj) {	
+		var d = document.getElementById("div");
+		d.style.visibility = "visible";
+		for(var i=0; i<4; i++) {
+		if(obj.id == ("li" + i))
+			d.innerHTML = text[i];
+		}
+		d.style.left = e.x + "px";
+		d.style.top = e.y + "px";
+	}
+	function g() {
+		var d = document.getElementById("div");
+		d.style.visibility = "hidden";
+	}
+</script>
+</head>
+<body>
+<h3>아이템에 마우스를 올리면 설명 출력</h3>
+<hr>
+<p>여름 방학 때 하고 싶은 것들</p>
+<ul>
+	<li id="li0" onmouseover="f(event, this)" onmouseout="g()">자전거로 대한민국 일주</li>
+	<li id="li1" onmouseover="f(event, this)" onmouseout="g()">책 100권 읽기</li>
+	<li id="li2" onmouseover="f(event, this)" onmouseout="g()">철인 3종 경기 준비</li>
+	<li id="li3" onmouseover="f(event, this)" onmouseout="g()">자바스크립트 정복</li>
+</ul>
+<div id="div"></div>
+</body>
+</html>
